@@ -8,18 +8,11 @@ public class ATM {
 
 	//state
 	private User active;
-
 	private User account1 = new User("Bob", "1234", 100.00);
-
 	private User account2 = new User("Alice", "3333", 250.00);
-
 	private User account3 = new User("JT", "0001", 999999999.00);
-
 	private User blank = new User("Null", "Null", 0.00);
-
 	private User[] users = {account1, account2, account3};
-
-
 	//constructor
 	public ATM() {
 

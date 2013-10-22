@@ -11,7 +11,7 @@ public class ATM {
 	private User account1 = new User("Bob", "1234", 100.00);
 	private User account2 = new User("Alice", "3333", 250.00);
 	private User account3 = new User("JT", "0001", 999999999.00);
-	private User[] users = {account1, account2, account3};
+	private User[] users = {banker1, banker2, banker3};
 	//constructor
 	public ATM() {
 

@@ -1,10 +1,10 @@
 public class Account {
 	
 	private String name;
-	private int pin;
+	private String pin;
 	private int balance;
 
-	public Accounts(String name, int pin, int balance) {
+	public Account(String name, String pin, int balance) {
 		setBalance(balance);
 		setPin(pin);
 		setName(name);
@@ -17,8 +17,8 @@ public class Account {
 		}
 	}
 
-	public void setPin(int pin) {
-		if (pin >= 0 && pin <= 9999) {
+	public void setPin(String pin) {
+		if (pin.length() == 4) {
 			this.pin = pin;
 		}
 	}
@@ -32,19 +32,19 @@ public class Account {
 	}
 
 	public void withdraw(int withdraw) {
-		this.balance = balance - withdraw;
+		if (balance > withdraw) {
+			this.balance = balance - withdraw;
+		} else {
+			System.out.println("I am sorry. You do not have that much money in your account.");
+		}
 	}
 
 	public String checkName() {
 		return this.name;
 	}
 
-	public int checkPin() {
+	public String checkPin() {
 		return this.pin;
-	}
-
-	public void logout() {
-
 	}
 
 }
